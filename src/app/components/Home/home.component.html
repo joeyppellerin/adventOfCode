@@ -1,0 +1,13 @@
+<app-titre-page [titrePage]="'Solutionnaire'"></app-titre-page>
+<a target="_blank" href="https://adventofcode.com/">Accéder à Advent of code</a>
+<div class="mt-50">
+  <div *ngIf="estListeAdventOfCodeAffiche;else alertInfo">
+    <div *ngFor="let adventOfCode of listeAdventOfCode; let i = index">
+      <app-accordion [adventOfCode]="adventOfCode" [index]="i"></app-accordion>
+    </div>
+  </div>
+  <ng-template #alertInfo>
+    <app-alert-info [message]="messageInfo"></app-alert-info>
+  </ng-template>
+</div>
+

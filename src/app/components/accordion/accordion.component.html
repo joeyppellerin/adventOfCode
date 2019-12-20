@@ -1,0 +1,25 @@
+<div *ngIf="adventOfCode.reponses && adventOfCode.reponses.length > 0">
+  <div class="accordion" id="accordion">
+    <div class="card">
+      <div class="card-header" [id]="'heading' + index">
+        <h4 class="mb-0">
+          <button class="btn btn-link" type="button" data-toggle="collapse" [attr.data-target]="'#collapse' + index" aria-expanded="false" [attr.aria-controls]="'collapse' + index">
+            {{ adventOfCode.year }}
+          </button>
+        </h4>
+      </div>
+      <div [id]="'collapse' + index" class="collapse" [ngClass]="{show: index===0}" role="tabpanel" [attr.aria-labelledby]="'#heading' + index">
+        <div class="card-body">
+          <h5>{{ sousTitre }}</h5>
+          <ol>
+            <div *ngFor="let reponse of adventOfCode.reponses">
+              <li>
+                <span>{{ reponse }}</span>
+              </li>
+            </div>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
