@@ -1,6 +1,7 @@
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserModule } from '@angular/platform-browser';
+import { CommonModule } from '@angular/common';
 import { ComponentModule } from './components/component.module';
 import { NgModule } from '@angular/core';
 
@@ -10,6 +11,7 @@ import { NgModule } from '@angular/core';
   ],
   imports: [
     BrowserModule,
+    CommonModule,
     AppRoutingModule,
     ComponentModule
   ],

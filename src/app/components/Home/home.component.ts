@@ -8,10 +8,10 @@ import { EtapeUnService } from './../../../services/2019/etapeUn.service';
 })
 
 export class HomeComponent implements OnInit {
-  public reponse: string [];
+  public reponses: string [];
 
   constructor(private readonly etapeUnService: EtapeUnService) {
-    this.reponse = [];
+    this.reponses = [];
   }
 
   ngOnInit() { }

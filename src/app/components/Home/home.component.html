@@ -1,5 +1,12 @@
-<div class="alert alert-primary">
-  <p>
-    It works
-  </p>
-</div>
+<!-- TODO: Sortir le titre principal dans un component -->
+<h1>Advent of code</h1>
+<!-- TODO: Sortir le titre secondaire dans un component -->
+<h2>Solutionnaire 2019</h2>
+<h5>Réponses :</h5>
+<ol>
+  <div *ngFor="let reponse of reponses">
+    <li>
+      <span>{{ reponse }}</span>
+    </li>
+  </div>
+</ol>
