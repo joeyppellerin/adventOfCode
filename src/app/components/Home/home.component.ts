@@ -11,11 +11,11 @@ import { GestionAdventOfCodeService } from './../../services/gestion-advent-of-c
 
 export class HomeComponent implements OnInit {
   public estListeAdventOfCodeAffiche: boolean;
-  public listeAdventOfCode: AdventOfCode[];
+  public listeAdventOfCode: Array<AdventOfCode>;
   public messageInfo: string;
 
   constructor(private readonly gestionAdventOfCodeService: GestionAdventOfCodeService) {
-    this.listeAdventOfCode = [];
+    this.listeAdventOfCode = new Array();
     this.messageInfo = `Aucune solution de l'Advent of code n'a encore été soumise.`;
   }
 

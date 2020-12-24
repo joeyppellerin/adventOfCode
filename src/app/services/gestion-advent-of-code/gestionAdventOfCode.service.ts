@@ -6,10 +6,10 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class GestionAdventOfCodeService {
-  private listeAdventOfCode: AdventOfCode[];
+  private listeAdventOfCode: Array<AdventOfCode>;
 
   constructor(private readonly etapeUnService: EtapeUnService) {
-    this.listeAdventOfCode = [];
+    this.listeAdventOfCode = new Array();
     this.listeAdventOfCode.push(new AdventOfCode('2019', this.generateAdventOfCode2019()));
   }
 
