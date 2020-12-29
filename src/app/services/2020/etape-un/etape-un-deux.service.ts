@@ -1,5 +1,5 @@
-import DATA_JOEY from '../etape-un-un/data-joey-un-un';
-import DATA_TOM from '../etape-un-un/data-tom-un-un';
+import DATA_JOEY from './data-joey-un-un';
+import DATA_TOM from './data-tom-un-un';
 import { Injectable } from '@angular/core';
 
 @Injectable({providedIn: 'root'})
