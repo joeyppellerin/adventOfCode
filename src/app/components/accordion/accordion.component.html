@@ -12,9 +12,15 @@
         <div class="card-body">
           <h5>{{ sousTitre }}</h5>
           <ol>
-            <div *ngFor="let reponse of adventOfCode.reponses">
+            <div class="element-list" *ngFor="let reponses of adventOfCode.reponses">
               <li>
-                <span>{{ reponse }}</span>
+                <ng-container *ngFor="let sousReponse of reponses.sousReponses">
+                  <ul>
+                    <li>
+                      <span>{{ sousReponse }}</span>
+                    </li>
+                  </ul>
+                </ng-container>
               </li>
             </div>
           </ol>

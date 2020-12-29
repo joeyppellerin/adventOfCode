@@ -4,7 +4,8 @@ import { AdventOfCode } from 'src/app/models/advent-of-code';
 
 @Component({
   selector: 'app-accordion',
-  templateUrl: 'accordion.component.html'
+  templateUrl: 'accordion.component.html',
+  styleUrls: ['accordion.component.scss'],
 })
 
 export class AccordionComponent implements OnInit {

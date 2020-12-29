@@ -1,6 +1,6 @@
 import { AdventOfCode } from 'src/app/models/advent-of-code';
-import { EtapeUnService } from '../2019/etape-un.service';
 import { Injectable } from '@angular/core';
+import { SousReponses } from './../../models/reponses';
 
 @Injectable({
   providedIn: 'root'
@@ -8,7 +8,7 @@ import { Injectable } from '@angular/core';
 export class GestionAdventOfCodeService {
   private listeAdventOfCode: Array<AdventOfCode>;
 
-  constructor(private readonly etapeUnService: EtapeUnService) {
+  constructor() {
     this.listeAdventOfCode = new Array();
     this.listeAdventOfCode.push(new AdventOfCode('2019', this.generateAdventOfCode2019()));
   }
@@ -17,9 +17,8 @@ export class GestionAdventOfCodeService {
     return this.listeAdventOfCode;
   }
 
-  private generateAdventOfCode2019(): string[] {
-    const listeReponses = [];
-    // listeReponses.push(this.etapeUnService.getReponse());
+  private generateAdventOfCode2019(): Array<SousReponses> {
+    const listeReponses = new Array<SousReponses>();
 
     return listeReponses;
   }
