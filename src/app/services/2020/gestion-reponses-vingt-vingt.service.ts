@@ -1,6 +1,7 @@
 import { AdventOfCode } from 'src/app/models/advent-of-code';
 import { EtapeDeuxDeuxService } from 'src/app/services/2020/etape-deux/etape-deux-deux.service';
 import { EtapeDeuxUnService } from 'src/app/services/2020/etape-deux/etape-deux-un.service';
+import { EtapeQuatreDeuxService } from 'src/app/services/2020/etape-quatre/etape-quatre-deux.service';
 import { EtapeQuatreUnService } from 'src/app/services/2020/etape-quatre/etape-quatre-un.service';
 import { EtapeTroisDeuxService } from 'src/app/services/2020/etape-trois/etape-trois-deux.service';
 import { EtapeTroisUnService } from 'src/app/services/2020/etape-trois/etape-trois-un.service';
@@ -21,6 +22,7 @@ export class GestionReponsesVingtVingtService {
     private readonly etapeTroisUnService: EtapeTroisUnService,
     private readonly etapeTroisDeuxService: EtapeTroisDeuxService,
     private readonly etapeQuatreUnService: EtapeQuatreUnService,
+    private readonly etapeQuatreDeuxService: EtapeQuatreDeuxService,
   ) {
     this.listeAdventOfCode = new Array();
     this.listeAdventOfCode.push(new AdventOfCode('2020', this.generateAdventOfCode2020()));
@@ -35,7 +37,7 @@ export class GestionReponsesVingtVingtService {
     listeReponses.push(this.getSousReponses(this.etapeUnUnService.getReponse(), this.etapeUnDeuxService.getReponse()));
     listeReponses.push(this.getSousReponses(this.etapeDeuxUnService.getReponse(), this.etapeDeuxDeuxService.getReponse()));
     listeReponses.push(this.getSousReponses(this.etapeTroisUnService.getReponse(), this.etapeTroisDeuxService.getReponse()));
-    listeReponses.push(this.getSousReponses(this.etapeQuatreUnService.getReponse(), ''));
+    listeReponses.push(this.getSousReponses(this.etapeQuatreUnService.getReponse(), this.etapeQuatreDeuxService.getReponse()));
 
     return listeReponses;
   }

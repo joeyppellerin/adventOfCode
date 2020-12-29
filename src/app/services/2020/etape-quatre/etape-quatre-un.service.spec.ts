@@ -23,13 +23,13 @@ describe('EtapeQuatreUn', () => {
   });
 
   it('lorsque DATA_TOM contient des passeports, devrait retourner 254', () => {
-    service.DATA = DATA_TOM;
+    (service as any).DATA = DATA_TOM;
 
     expect(service.getReponse()).toEqual('254');
   });
 
   it('lorsque DATA_JOEY contient des passeports, devrait retourner 213', () => {
-    service.DATA = DATA_JOEY;
+    (service as any).DATA = DATA_JOEY;
 
     expect(service.getReponse()).toEqual('213');
   });
