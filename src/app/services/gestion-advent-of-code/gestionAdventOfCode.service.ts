@@ -1,6 +1,6 @@
 import { AdventOfCode } from 'src/app/models/advent-of-code';
+import { GestionReponsesVingtVingtService } from './../2020/gestion-reponses-vingt-vingt.service';
 import { Injectable } from '@angular/core';
-import { SousReponses } from './../../models/reponses';
 
 @Injectable({
   providedIn: 'root'
@@ -8,19 +8,15 @@ import { SousReponses } from './../../models/reponses';
 export class GestionAdventOfCodeService {
   private listeAdventOfCode: Array<AdventOfCode>;
 
-  constructor() {
-    this.listeAdventOfCode = new Array();
-    this.listeAdventOfCode.push(new AdventOfCode('2019', this.generateAdventOfCode2019()));
+  constructor(
+    private readonly gestionReponsesVingtVingtService: GestionReponsesVingtVingtService,
+  ) {
+    this.listeAdventOfCode = new Array<AdventOfCode>();
+    this.listeAdventOfCode.push(...this.gestionReponsesVingtVingtService.getListeAdventOfCode());
   }
 
-  public getListeAdventOfCode(): AdventOfCode[] {
+  public getListeAdventOfCode(): Array<AdventOfCode> {
     return this.listeAdventOfCode;
-  }
-
-  private generateAdventOfCode2019(): Array<SousReponses> {
-    const listeReponses = new Array<SousReponses>();
-
-    return listeReponses;
   }
 
 }
