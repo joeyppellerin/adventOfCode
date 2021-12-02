@@ -13,7 +13,7 @@ describe('DeuxDecembreBService', () => {
     expect(service).toBeTruthy();
   });
 
-  it(`should return ''`, () => {
-    expect(service.getResponse()).toEqual('');
+  it(`should return '1997106066'`, () => {
+    expect(service.getResponse()).toEqual('1997106066');
   });
 });
