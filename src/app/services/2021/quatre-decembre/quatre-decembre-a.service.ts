@@ -15,18 +15,23 @@ export class QuatreDecembreAService {
     const numeroTire = [7, 4, 9, 5, 11, 17, 23, 2, 0, 14, 21, 24, 10, 16, 13, 6, 15, 25, 12, 22, 18, 20, 8, 19, 3, 26, 1];
     const cartes = this.preparerCartes();
     const nbNombreAlligneBingo = cartes[0][0].length;
+    let listeNumerosParCarte = [];
     let nbNombreHorizontal = 0;
-    let nbnombreVertical = 0
+    let nbnombreVertical = 0;
 
-    // for (const carte of cartes) {
-    //   for (const numero of numeroTire) {
-    //     for (let i = 0; i < carte.length; i++) {
-    //       for (let i = 0; i < carte.length; i++)
-    //     }
-    //   }
-    // }
-
-    console.log(cartes);
+    for (const carte of cartes) {
+      for (const numero of numeroTire) {
+        let listeNumerosSelectionne = []
+        for (let i = 0; i < carte.length; i++) {
+          for (let j = 0; j < carte[i].length; j++) {
+            if (+carte[i][j] === numero) {
+              listeNumerosSelectionne.push(numero); 
+            }
+          }
+        }
+        listeNumerosParCarte.push(listeNumerosSelectionne)
+      }
+    }
 
     return '';
   }
